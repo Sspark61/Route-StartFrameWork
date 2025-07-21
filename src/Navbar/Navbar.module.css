@@ -1,0 +1,9 @@
+.navbar{
+    background-color: #2C3E50 !important;
+    font-weight: 700 !important;
+}
+
+.active{
+    background-color: #1ABC9C !important;
+    border-radius: 10px;
+}
