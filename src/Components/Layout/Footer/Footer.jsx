@@ -10,8 +10,7 @@ import {
 
 export default function Footer() {
   return (
-    <>
-      <div className="d-flex flex-column  fixed-bottom">
+      <div className="d-flex flex-column">
         <div
           className={`${styles.foot1} container-fluid details-footer d-flex justify-content-between`}
         >
@@ -54,6 +53,5 @@ export default function Footer() {
           </p>
         </div>
       </div>
-    </>
   );
 }
