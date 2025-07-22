@@ -1,10 +1,10 @@
 import React from 'react'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './Home/Home';
-import About from './About/About';
-import Portfolio from './Portfolio/Portfolio';
-import Contact from './Contact/Contact';
+import Home from './Pages/Home/Home';
+import About from './Pages/About/About';
+import Portfolio from './Pages/Portfolio/Portfolio';
+import Contact from './Pages/Contact/Contact';
 import Layout from './Layout/Layout';
 
 function App() {
