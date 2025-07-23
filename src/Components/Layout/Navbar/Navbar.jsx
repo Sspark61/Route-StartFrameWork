@@ -4,7 +4,7 @@ import styles from './Navbar.module.css';
 function Navbar() {
   return (
     <nav className={`${styles.navbar} navbar navbar-expand-lg bg-body-tertiary fixed-top p-3 text-uppercase text-white`}>
-      <div className="container">
+      <div className="container d-flex justify-content-between align-items-center">
         <NavLink className="navbar-brand text-white fs-2 fw-bold" to="">
           start framework
         </NavLink>

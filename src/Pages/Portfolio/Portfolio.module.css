@@ -1,0 +1,30 @@
+.cont{
+    color: #2C3E50 !important;
+}
+
+.line{
+    width: 80px;
+    height: 5px;
+    background-color: #2C3E50;
+}
+
+.card{
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover .overlay{
+    opacity: 0.8;
+}
+
+.overlay{
+    opacity: 0;
+    background-color: #1ABC9C;
+    transition: all 0.6s;
+}
+
+.faPlus{
+    font-size: 80px !important;
+}

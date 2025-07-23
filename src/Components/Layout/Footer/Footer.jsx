@@ -12,7 +12,7 @@ export default function Footer() {
   return (
       <div className="d-flex flex-column">
         <div
-          className={`${styles.foot1} container-fluid details-footer d-flex justify-content-between`}
+          className={`${styles.foot1} container-fluid details-footer d-flex justify-content-between align-items-center row-gap-5  flex-column flex-sm-column flex-lg-row`}
         >
           <div className="loc col-md-4">
             <h1>Location</h1>
