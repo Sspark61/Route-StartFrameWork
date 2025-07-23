@@ -4,15 +4,28 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
-  const [inputvalue, setInputValue] = useState("");
-  const [isFocused, setIsFocused] = useState(false);
+  const [nameFocused, setNameFocused] = useState(false);
+  const [ageFocused, setAgeFocused] = useState(false);
+  const [emailFocused, setEmailFocused] = useState(false);
+  const [passFocused, setPassFocused] = useState(false);
 
   const handleFocus = (e) => {
-    console.log('changed');
-    
-    const value = e.target.value;
-    setInputValue(value);
-    setIsFocused(value.trim() !== "");
+    console.log("changed");
+    console.log(e);
+
+    if (e.target.name === "username") {
+      const value = e.target.value;
+      setNameFocused(value.trim() !== "");
+    } else if (e.target.name === "userage") {
+      const value = e.target.value;
+      setAgeFocused(value.trim() !== "");
+    } else if (e.target.name === "useremail") {
+      const value = e.target.value;
+      setEmailFocused(value.trim() !== "");
+    } else if (e.target.name === "userpassword") {
+      const value = e.target.value;
+      setPassFocused(value.trim() !== "");
+    }
   };
   return (
     <div
@@ -31,50 +44,70 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <form action="" className="w-100 p-3 mx-auto mt-5">
-          <label htmlFor="username" style={{ display: isFocused ? "block" : "none" , transition: '0.6s',} } className={`position relative top-0`}>
+        <form action="" className="w-100 p-3 mx-auto mt-5 d-flex flex-column justify-content-start">
+          <label
+            htmlFor="username"
+            className={`position-relative w-100  ${
+              nameFocused ? " top-0" : ""
+            }`}
+          >
             User Name :
           </label>
           <input
             type="text"
             id="username"
-            className="form-control border-0 border-bottom py-3 position-relative"
+            className={`${styles["form-control"]} form-control border-0 border-bottom py-3 position-relative`}
             placeholder="User Name"
             name="username"
-            value={inputvalue}
             onChange={handleFocus}
           />
-          <label htmlFor="userage" className={`position relative top-0`}>
+          <label
+            htmlFor="userage"
+            className={`position-relative w-100  ${ageFocused ? " top-0" : ""}`}
+          >
             User Age :
           </label>
           <input
             type="text"
             id="userage"
-            className="form-control border-0 border-bottom py-3 position-relative"
+            className={`${styles["form-control"]} form-control border-0 border-bottom py-3 position-relative`}
             placeholder="User Age"
             name="userage"
+            onChange={handleFocus}
           />
-          <label htmlFor="useremail" className={`position relative top-0`}>
+          <label
+            htmlFor="useremail"
+            className={`position-relative w-100  ${
+              emailFocused ? " top-0" : ""
+            }`}
+          >
             User Email :
           </label>
           <input
             type="text"
             id="useremail"
-            className="form-control border-0 border-bottom py-3 position-relative"
+            className={`${styles["form-control"]} form-control border-0 border-bottom py-3 position-relative`}
             placeholder="User Email"
             name="useremail"
+            onChange={handleFocus}
           />
-          <label htmlFor="userpassword" className={"position relative top-0"}>
+          <label
+            htmlFor="userpassword"
+            className={`position-relative w-100  ${
+              passFocused ? " top-0" : ""
+            }`}
+          >
             User Password :
           </label>
           <input
             type="text"
             id="userpassword"
-            className="form-control border-0 border-bottom py-3 position-relative"
+            className={`${styles["form-control"]} form-control border-0 border-bottom py-3 position-relative`}
             placeholder="User Password"
             name="userpassword"
+            onChange={handleFocus}
           />
-          <button className={`${styles.btn} btn mt-4 text-white`}>
+          <button className={`${styles.btn} btn mt-4 text-white w-25`}>
             Send Message
           </button>
         </form>
