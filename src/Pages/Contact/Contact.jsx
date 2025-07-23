@@ -10,9 +10,6 @@ export default function Contact() {
   const [passFocused, setPassFocused] = useState(false);
 
   const handleFocus = (e) => {
-    console.log("changed");
-    console.log(e);
-
     if (e.target.name === "username") {
       const value = e.target.value;
       setNameFocused(value.trim() !== "");
